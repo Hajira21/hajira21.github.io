@@ -1,23 +1,55 @@
 html {
   background-color: #8f001b  ;
+  width: fit-content;
+  height: fit-content;
+  position: sticky;
+  
 }
 body {
-    width: 70%;
+  font-family: "Times New Roman", Times, serif;
+  width: fit-content;
+  height: fit-content;
+  position: sticky;
+  
 }
 
-.yellow-square {
+.form-page {
+  height: fit-content;
+  margin-left: -15%;
+  position: sticky;
+  left: 13%;
+  
+
   background-color: white;
-  width: 100%;
-  margin: 0 auto;
+  width: 75%;
+  
+}
+
+ a:link, a:visited {
+  background-color: #8f001b;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: underline;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: grey;
 }
 
 h1 {
   font-size: 30px;
   font-family: "Times New Roman", Times, serif;
 	text-align: center;
-	margin: 0;
-	color: #000000; 
+  margin:auto 0;
+  color: white;
+  background-color: #2d2d2c;
+   
 
+}
+form{
+  width: 100%;
 }
 
 img {
@@ -25,17 +57,9 @@ img {
   width: 100%;
   height: auto;
   margin: 0 auto;
-  align: center;
-
 }
-form {
-
-}
-
-p {
-  color #000000;
-  text-align: center;
-
+li.thick{
+  font-weight: bold;
 }
 
 table {
@@ -45,17 +69,26 @@ table {
 
 }
 
+
+
 /* Defining styling for a specific element type - each question */
 .questions {
   width: 100%;
-  padding: 20px;
-  margin: 20px;
-  
+  font-size: 20px;
+  padding: 200px;
+  margin: 100px;
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+
+   
 }
 .comment {
-  width: 33%;
-  padding: 50px;
-  margin: 50px;
+  width: 100%;
+  font-size: 20px;
+  padding: 200px;
+  margin: 100px;
   margin-top: 0px;
   padding-top: 0px;
   
@@ -72,10 +105,10 @@ table {
   cursor: pointer;
   text-align: center;
 }
+
 .likert li {
   float: left;
   list-style-type: none;
-  align-self: center;
 }
 
 /* Defining styling for a specific element with an id */

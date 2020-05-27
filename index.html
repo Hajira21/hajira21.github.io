@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
- <meta charset="utf-8">
-	<link href="styles/style.css" rel="stylesheet" type="text/css">
+<meta charset="utf-8">
+  <link href="styles/style.css" rel="stylesheet" type="text/css">
 <title>Survey</title>
 <!--Level 1 requirement: Title-->
 </head>
 
 <body>
-<div class="yellow-square">
-<h1> <a href="https://www.uottawa.ca/en">University of Ottawa</a> <br>
+
+<div class="form-page">
+        
+<h1> <a href="https://www.uottawa.ca/en">University of Ottawa</a> 
 homepage UI evaluation</h1>
 <!--Level 1 requirement: Link to website-->
 
@@ -24,31 +26,33 @@ homepage UI evaluation</h1>
 evaluation of the website: -->
 
 <div class="questions">
-<ol>
-  <li>Was this homepage easy to use?</li>
-<input type="radio" name="q2o1" value="button">Yes<br>
-<input type="radio" name="q2o2" value="button">No<br>
-<!-- A single choice question (radio button) -->
 
-  <li> Is this site easy to navigate? </li>
+<ol class="center">
+  <li class="thick" >Was this homepage easy to use?</li>
+<input type="radio" name="q2o1" value="button">Yes<br>
+<input type="radio" name="q2o2" value="button2">No<br>
+<!-- A single choice question (radio button) -->
+<br>
+  <li class="thick"> Is this site easy to navigate? </li>
 <select name="list">
-	<option value="option1" selected="selected">Very easy </option>
-	<option value="option2">Not too hard </option>
-	<option value="option3">Very difficult </option> 
+  <option value="option1" selected="selected">Very easy </option>
+  <option value="option2">Not too hard </option>
+  <option value="option3">Very difficult </option> 
 </select><br>
+<br>
 <!--A single choice question (single selection list)-->
 
-  <li> What functions did you find useful?</li>
+  <li class="thick"> What functions did you find useful?</li>
 <input type="checkbox" name="q4o1" value="q4option1">Find a program or course<br>
 <input type="checkbox" name="q4o2" value="q4option2">Find your future<br>
 <input type="checkbox" name="q403" value="q4option3">Campus tours<br>
 <!-- A multi-selection type question (several boxes can be selected)-->
-
-<li>What could this site improve?</li>
+<br>
+<li class="thick">What could this site improve?</li>
 <input type="text" name="q1"><br>
 <!--A text type question (e.g. user must type in the answer)-->
-
-<li>How would you rate your experience?</li>
+<br>
+<li class="thick">How would you rate your experience?</li>
 <br>
 <ul class="likert">
   <li>Negative </li>
@@ -60,8 +64,6 @@ evaluation of the website: -->
   <li>Positive</li>
 </ul>
 </ol> 
-
-<br>
 <!--A likert type question (e.g. strongly agree to strongly disagree. It is up to you to
 figure out how to simulate this)-->
 <br>
@@ -70,7 +72,7 @@ figure out how to simulate this)-->
 <div class="comment">
 
 Provide additional comments<br>
-<textarea rows="5" cols="30"></textarea>
+<textarea rows="5" cols="35"></textarea>
 <!-- A place to write comments-->
 </div>
 
@@ -78,8 +80,8 @@ Provide additional comments<br>
 <br>
 
 <button id="submitButton" type="button" class="block">
-		SUBMIT your questionnaire
-	</button>
+    SUBMIT your questionnaire
+  </button>
 <!-- A button to submit the questionnaire-->
 </div>
 
