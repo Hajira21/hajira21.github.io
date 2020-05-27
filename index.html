@@ -29,11 +29,6 @@ evaluation of the website: -->
 <input type="radio" name="q2o2" value="button">No<br>
 <!-- A single choice question (radio button) -->
 
-<li>What could this site improve?</li>
-<input type="text" name="q1"><br>
-<!--A text type question (e.g. user must type in the answer)-->
-
-
   <li> Is this site easy to navigate? </li>
 <select name="list">
 	<option value="option1" selected="selected">Very easy </option>
@@ -48,11 +43,24 @@ evaluation of the website: -->
 <input type="checkbox" name="q403" value="q4option3">Campus tours<br>
 <!-- A multi-selection type question (several boxes can be selected)-->
 
+<li>What could this site improve?</li>
+<input type="text" name="q1"><br>
+<!--A text type question (e.g. user must type in the answer)-->
+
 </ol> 
 How do you rate your experience <br>
+<ul class="likert">
+  <li>Negative </li>
+  <li><input type="radio" name="guilty" value="1" /></li>
+  <li><input type="radio" name="guilty" value="2" /></li>
+  <li><input type="radio" name="guilty" value="3" /></li>
+  <li><input type="radio" name="guilty" value="4" /></li>
+  <li><input type="radio" name="guilty" value="5" /></li>
+  <li>Positive</li>
+</ul>
 <!--A likert type question (e.g. strongly agree to strongly disagree. It is up to you to
 figure out how to simulate this)-->
-Comments <br>
+We would appreciate feedback Comments <br>
 <textarea rows="5" cols="30"></textarea>
 <!-- A place to write comments-->
 <br>
