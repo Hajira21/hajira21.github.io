@@ -1,22 +1,18 @@
 html {
   background-color: #8f001b  ;
-  margin-right: 100px;
-  margin-left: 100px;
+}
+body {
+    width: 70%;
 }
 
-body {
-  background-color:  #ffffff  ;
-  solid {outline-style: solid;}
-  outline-color: #8f001b;
-  width: 900px;
-  align: center;
-  margin-right: 100px;
-  margin-left: 100px;
-  
+.yellow-square {
+  background-color: white;
+  width: 100%;
+  margin: 0 auto;
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 30px;
   font-family: "Times New Roman", Times, serif;
 	text-align: center;
 	margin: 0;
@@ -26,25 +22,43 @@ h1 {
 
 img {
   display: block;
+  width: 100%;
+  height: auto;
   margin: 0 auto;
   align: center;
+
+}
+form {
+
 }
 
 p {
   color #000000;
+  text-align: center;
+
 }
 
 table {
 	border: 1px solid black;
-	background-color: #f1f1c1;
+  background-color: #f1f1c1;
+  text-align: center;
+
 }
 
 /* Defining styling for a specific element type - each question */
-.question {
-  background-color: black;
-  color: white;
-  margin: 20px;
+.questions {
+  width: 100%;
   padding: 20px;
+  margin: 20px;
+  
+}
+.comment {
+  width: 33%;
+  padding: 50px;
+  margin: 50px;
+  margin-top: 0px;
+  padding-top: 0px;
+  
 }
 
 /* Defining styling for a specific element type - large block buttons */
@@ -61,12 +75,13 @@ table {
 .likert li {
   float: left;
   list-style-type: none;
+  align-self: center;
 }
 
 /* Defining styling for a specific element with an id */
 #signature {
   text-align: right;
-  color: 000000;
+  color: white;
   font-style: italic;
   font-size: 75%;
 }

@@ -5,23 +5,25 @@
 	<link href="styles/style.css" rel="stylesheet" type="text/css">
 <title>Survey</title>
 <!--Level 1 requirement: Title-->
-
 </head>
 
 <body>
+<div class="yellow-square">
+<h1> <a href="https://www.uottawa.ca/en">University of Ottawa</a> <br>
+homepage UI evaluation</h1>
+<!--Level 1 requirement: Link to website-->
 
-<h1>How did you find the UI of the <a href="https://www.uottawa.ca/en">University of Ottawa</a> </p> homepage </h1>
+
 <p><img src="Images/uottawahomepage.png" alt="uottawa.ca/en" width="395" height="190"> </p>
 <!--Level 1 requirement: image of website-->
 
 
-<!--Level 1 requirement: Link to website-->
 
 <form action="index.php" name="my form" method="POST">
-<!-- A form (<form> tag) containing at least 6 questions of different types related to the
+<!--Level 1 requirement: A form (<form> tag) containing at least 6 questions of different types related to the
 evaluation of the website: -->
 
-
+<div class="questions">
 <ol>
   <li>Was this homepage easy to use?</li>
 <input type="radio" name="q2o1" value="button">Yes<br>
@@ -46,8 +48,8 @@ evaluation of the website: -->
 <input type="text" name="q1"><br>
 <!--A text type question (e.g. user must type in the answer)-->
 
-</ol> 
-How do you rate your experience <br>
+<li>How would you rate your experience?</li>
+<br>
 <ul class="likert">
   <li>Negative </li>
   <li><input type="radio" name="rate" value="1" /></li>
@@ -57,19 +59,30 @@ How do you rate your experience <br>
   <li><input type="radio" name="rate" value="5" /></li>
   <li>Positive</li>
 </ul>
+</ol> 
+
 <br>
 <!--A likert type question (e.g. strongly agree to strongly disagree. It is up to you to
 figure out how to simulate this)-->
 <br>
+</div>
+
+<div class="comment">
+
 Provide additional comments<br>
 <textarea rows="5" cols="30"></textarea>
 <!-- A place to write comments-->
+</div>
+
+
 <br>
 
 <button id="submitButton" type="button" class="block">
 		SUBMIT your questionnaire
 	</button>
 <!-- A button to submit the questionnaire-->
+</div>
+
 
 
 
