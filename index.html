@@ -1,1 +1,76 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+<title>Survey</title>
+<!--Level 1 requirement: Title-->
+
+</head>
+
+<body>
+
+<h1>How did you find the UI of the University of Ottawa homepage </h1>
+<p><img src="uottawahomepage.png" alt="uottawa.ca/en" width="395" height="190"> </p>
+<!--Level 1 requirement: image of website-->
+
+
+<p>Go to the homepage for the <a href="https://www.uottawa.ca/en">University of Ottawa</a> </p>
+<!--Level 1 requirement: Link to website-->
+
+<form action="index.php" name="my form" method="POST">
+<!-- A form (<form> tag) containing at least 6 questions of different types related to the
+evaluation of the website: -->
+
+
+<ol>
+  <li> Type question</li>
+<input type="text" name="q1"><br>
+<!--A text type question (e.g. user must type in the answer)-->
+
+  <li>Radio button</li>
+<input type="radio" name="q2" value="button">Button<br>
+<!-- A single choice question (radio button) -->
+
+  <li>Selection list </li>
+<select name="list">
+	<option value="option1" selected="selected">Option 1</option>
+	<option value="option2"> Option 2</option>
+	<option value="option3"> Option 3</option> 
+</select><br>
+<!--A single choice question (single selection list)-->
+
+  <li>Multi-selection</li>
+<input type="checkbox" name="q4o1" value="q4option1">Option 1<br>
+<input type="checkbox" name="q4o2" value="q4option2">Option 2<br>
+<input type="checkbox" name="q403" value="q4option3">Option 3<br>
+<!-- A multi-selection type question (several boxes can be selected)-->
+
+</ol> 
+How do you rate your experience <br>
+<!--A likert type question (e.g. strongly agree to strongly disagree. It is up to you to
+figure out how to simulate this)-->
+Comments <br>
+<textarea rows="5" cols="30"></textarea>
+<!-- A place to write comments-->
+<br>
+
+<button id="submitButton" type="button" class="block">
+		SUBMIT your questionnaire
+	</button>
+<!-- A button to submit the questionnaire-->
+
+
+
+<p id="signature">Site created by Hajira Mohamed</p>	
+<!-- Your signature (Website designed by ...) at the bottom of the page also known as a footer-->
+
+
+
+
+
+
+</form>
+
+</body>
+</html>
