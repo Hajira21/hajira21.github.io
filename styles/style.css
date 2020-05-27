@@ -1,11 +1,10 @@
 html {
-  background-color: #ecf9f2;
+  background-color:  #ffffff  ;
 }
 
 body {
-  background-color: ecf9f2;
+  background-color:  #ffffff  ;
   width: 900px;
-  border: 2px solid black;
   padding: 0px 20px 20px 20px;
   
 }
@@ -15,7 +14,7 @@ h1 {
 	text-align: center;
 	margin: 0;
 	padding: 20px 0;
-	color: #ff00ff;  /* Fuchsia */
+	color: #000000; 
 	text-shadow: 3px 3px 1px black;
 }
 
@@ -26,7 +25,7 @@ img {
 }
 
 p {
-  color: red;
+  color #000000;
 }
 
 table {
