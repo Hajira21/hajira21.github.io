@@ -1,9 +1,11 @@
 html {
-  background-color:  #ffffff  ;
+  background-color: #8f001b  ;
 }
 
 body {
   background-color:  #ffffff  ;
+  solid {outline-style: solid;}
+  outline-color: #8f001b;
   width: 900px;
   padding: 0px 20px 20px 20px;
   
