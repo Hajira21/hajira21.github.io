@@ -88,8 +88,9 @@ table {
   width: 100%;
   height: fit-content;
   text-align: left;
-  margin-left: 1%;
-  padding-left: 1%;
+  position: sticky;
+  
+  margin-left: 2%;
   margin-bottom: 0;
   padding-bottom: 0;
   font-size: 20px;
