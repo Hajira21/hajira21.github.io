@@ -10,12 +10,14 @@ body {
 }
 
 h1 {
-	font-size: 60px;
+  font-size: 60px;
+  font-family: "Times New Roman", Times, serif;
 	text-align: center;
 	margin: 0;
 	padding: 20px 0;
 	color: #000000; 
-	text-shadow: 3px 3px 1px black;
+  text-shadow: 3px 3px 1px black;
+
 }
 
 img {
@@ -60,7 +62,7 @@ table {
 /* Defining styling for a specific element with an id */
 #signature {
   text-align: right;
-  color: red;
+  color: 000000;
   font-style: italic;
   font-size: 75%;
 }
