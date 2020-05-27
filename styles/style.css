@@ -1,5 +1,7 @@
 html {
   background-color: #8f001b  ;
+  margin-right: 100px;
+  margin-left: 100px;
 }
 
 body {
@@ -7,18 +9,18 @@ body {
   solid {outline-style: solid;}
   outline-color: #8f001b;
   width: 900px;
-  padding: 0px 20px 20px 20px;
+  align: center;
+  margin-right: 100px;
+  margin-left: 100px;
   
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 40px;
   font-family: "Times New Roman", Times, serif;
 	text-align: center;
 	margin: 0;
-	padding: 20px 0;
 	color: #000000; 
-  text-shadow: 3px 3px 1px black;
 
 }
 
