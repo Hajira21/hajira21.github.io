@@ -2,12 +2,12 @@
 /*Level 1 requirement: The use of external CSS (separate file) to define styles for titles, divisions, and your signature
 at the bottom of the site.*/
 #home {
-  width: 3%;
-  height: 3%;
+  width: 1%;
+  height: 1%;
   background: url(images/goodfoodlogo.jpg) 0 0;    
 }
 .h{
-  padding: 5px;
+  padding: 3px;
   text-align: left;
   background: white;
 }
