@@ -122,6 +122,7 @@ function getTotalPrice(chosenProducts) {
 		if (chosenProducts.indexOf(products[i].name) > -1){
 			totalPrice += products[i].price;
 		}
+		
 	}
-	return totalPrice;
+	return totalPrice.toFixed(2);
 }
