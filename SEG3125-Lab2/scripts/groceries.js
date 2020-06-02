@@ -23,7 +23,7 @@ var products = [
 		Vegetarian: false,
 		GlutenFree: true,
 		Organic: true,		
-		price: 10.00
+		price: 10.55
 	},
 	{
 		name: "Chicken",
