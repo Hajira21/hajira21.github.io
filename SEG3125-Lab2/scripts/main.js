@@ -11,6 +11,25 @@ function unselectChoices(x){
 		document.getElementById("dietSelect2").checked = false;
 		document.getElementById("dietSelect3").checked = false;	
 	}
+
+	
+		var x = document.getElementById("dietSelect1");
+		var y = document.getElementById("dietSelect2");
+		var z = document.getElementById("dietSelect3");
+		var checkboxesChecked = [];
+		
+			if(x.checked==true){
+				checkboxesChecked.push(x.value);
+			}
+			if(y.checked==true){
+				checkboxesChecked.push(y.value);
+			}
+			if(z.checked==true){
+				checkboxesChecked.push(z.value);
+			} 	
+		
+		
+		populateListProductChoices(checkboxesChecked, 'displayProduct');
 	
 
 }
@@ -34,27 +53,7 @@ function openInfo(evt, tabName) {
 
 		// Level 1 requirement: Navigation between two or three areas depending on your grouping of information.
 
-	if(tabName=='Products'){
 	
-		var x = document.getElementById("dietSelect1");
-		var y = document.getElementById("dietSelect2");
-		var z = document.getElementById("dietSelect3");
-		var checkboxesChecked = [];
-		
-			if(x.checked==true){
-				checkboxesChecked.push(x.value);
-			}
-			if(y.checked==true){
-				checkboxesChecked.push(y.value);
-			}
-			if(z.checked==true){
-				checkboxesChecked.push(z.value);
-			} 	
-		
-		
-		populateListProductChoices(checkboxesChecked, 'displayProduct');
-	
-	}
 
 }
 
