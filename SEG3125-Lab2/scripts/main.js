@@ -11,27 +11,22 @@ function unselectChoices(x){
 		document.getElementById("dietSelect2").checked = false;
 		document.getElementById("dietSelect3").checked = false;	
 	}
+	var x = document.getElementById("dietSelect1");
+	var y = document.getElementById("dietSelect2");
+	var z = document.getElementById("dietSelect3");
+	var checkboxesChecked = [];
+		
+	if(x.checked==true){
+		checkboxesChecked.push(x.value);
+	}
+	if(y.checked==true){
+		checkboxesChecked.push(y.value);
+	}
+	if(z.checked==true){
+		checkboxesChecked.push(z.value);
+	}
 
-	
-		var x = document.getElementById("dietSelect1");
-		var y = document.getElementById("dietSelect2");
-		var z = document.getElementById("dietSelect3");
-		var checkboxesChecked = [];
-		
-			if(x.checked==true){
-				checkboxesChecked.push(x.value);
-			}
-			if(y.checked==true){
-				checkboxesChecked.push(y.value);
-			}
-			if(z.checked==true){
-				checkboxesChecked.push(z.value);
-			} 	
-		
-		
-		populateListProductChoices(checkboxesChecked, 'displayProduct');
-	
-
+	populateListProductChoices(checkboxesChecked, 'displayProduct');
 }
 function openInfo(evt, tabName) {
 
@@ -50,11 +45,8 @@ function openInfo(evt, tabName) {
 	// Show the current tab, and add an "active" class to the button that opened the tab
 	document.getElementById(tabName).style.display = "block";
 	evt.currentTarget.className += " active";
-
-		// Level 1 requirement: Navigation between two or three areas depending on your grouping of information.
-
 	
-
+	// Level 1 requirement: Navigation between two or three areas depending on your grouping of information.
 }
 
 
@@ -63,6 +55,25 @@ function openInfo(evt, tabName) {
 // it makes each product name as the label for the checkbos
 
 function populateListProductChoices(slct1, slct2) {
+	var newText=[];
+	if (slct1.length> 1){
+		newText.push( 'We preselected products based on your ', slct1[0]);
+		for(let i=1; i< slct1.length; i++){
+			newText.push(' and ' ,slct1[i]);
+		}
+	}else{
+		if(slct1== ''){
+			newText.push('This is all the products in our store, go to the client tab to select your');
+		}else{
+		newText.push( 'We preselected products based on your ', slct1[0])
+		}
+	}
+	newText.push(' restrictions');
+	var text= newText.join("");
+
+	
+	document.getElementById("yourRestrictions").innerHTML = text;
+
     var s2 = document.getElementById(slct2);
 	
 	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
@@ -136,3 +147,17 @@ function selectedItems(){
 	// Level 1 requirement: the contents of the basket and its total
 		
 }
+/*var newText=[];
+	if (slct1.length> 1){
+		newText.push( 'We preselected products based on your ', slct1[0]);
+		for(let i=1; i< slct1.length; i++){
+			newText.push(' and ' ,slct1[i]);
+		}
+		newText.push(' restrictions');
+	}else{
+		newText.push( 'We preselected products based on your ', slct1[0])
+	}
+	var text= newText.join("");
+
+	
+	document.getElementById("yourRestrictions").innerHTML = text;*/
