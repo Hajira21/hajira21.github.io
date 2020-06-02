@@ -2,7 +2,18 @@
 // This function is called when any of the tab is clicked
 // It is adapted from https://www.w3schools.com/howto/howto_js_tabs.asp
 //Level 1 requirement: The use of JavaScript (separate files) 
+function unselectChoices(x){
+	if(x==1){
+		document.getElementById("dietSelect4").checked = false;
+	}
+	else{
+		document.getElementById("dietSelect1").checked = false;
+		document.getElementById("dietSelect2").checked = false;
+		document.getElementById("dietSelect3").checked = false;	
+	}
+	
 
+}
 function openInfo(evt, tabName) {
 
 	// Get all elements with class="tabcontent" and hide them
@@ -25,7 +36,6 @@ function openInfo(evt, tabName) {
 
 	if(tabName=='Products'){
 	
-		var w = document.getElementById("dietSelect4");
 		var x = document.getElementById("dietSelect1");
 		var y = document.getElementById("dietSelect2");
 		var z = document.getElementById("dietSelect3");
