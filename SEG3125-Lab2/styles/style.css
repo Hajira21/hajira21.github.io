@@ -1,5 +1,16 @@
 /* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
-
+/*Level 1 requirement: The use of external CSS (separate file) to define styles for titles, divisions, and your signature
+at the bottom of the site.*/
+#home {
+  width: 3%;
+  height: 3%;
+  background: url(goodfoodlogo.jpg) 0 0;    
+}
+.h{
+  padding: 5px;
+  text-align: left;
+  background: white;
+}
 * {
   box-sizing: border-box;
 }

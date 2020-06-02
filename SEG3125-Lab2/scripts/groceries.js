@@ -4,23 +4,79 @@
 
 var products = [
 	{
-		name: "brocoli",
-		vegetarian: true,
-		glutenFree: true,
+		name: "Brocoli",
+		Vegetarian: true,
+		GlutenFree: true,
+		Organic: true,
+		// Level 1 requirement: add a characteristic for this purpose in the list of products
 		price: 1.99
 	},
 	{
-		name: "bread",
-		vegetarian: true,
-		glutenFree: false,
+		name: "Bread",
+		Vegetarian: true,
+		GlutenFree: false,
+		Organic: false,
 		price: 2.35
 	},
 	{
-		name: "salmon",
-		vegetarian: false,
-		glutenFree: true,
+		name: "Salmon",
+		Vegetarian: false,
+		GlutenFree: true,
+		Organic: true,		
 		price: 10.00
+	},
+	{
+		name: "Chicken",
+		Vegetarian: false,
+		GlutenFree: true,
+		Organic: false,		
+		price: 12.99
+	},
+	{
+		name: "Beef",
+		Vegetarian: false,
+		GlutenFree: true,
+		Organic: true,		
+		price: 13.99
+	},
+	{
+		name: "Carrot",
+		Vegetarian: true,
+		GlutenFree: true,
+		Organic: true,
+		price: 1.99
+	},
+	{
+		name: "French fries",
+		Vegetarian: true,
+		GlutenFree: false,
+		Organic: false,		
+		price: 5.99
+	},
+	{
+		name: "Ice cream",
+		Vegetarian: true,
+		GlutenFree: false,
+		Organic: false,		
+		price: 4.99
+	},
+	{
+		name: "Cake",
+		Vegetarian: true,
+		GlutenFree: false,
+		Organic: false,		
+		price: 8.99
+	},
+	{
+		name: "Cauliflower",
+		Vegetarian: true,
+		GlutenFree: true,
+		Organic: false,		
+		price: 1.99
 	}
+	// Level 1 requirement: At least 10 possible products in the product list
+
+
 ];
 	
 
@@ -28,21 +84,36 @@ var products = [
 // given restrictions provided, make a reduced list of products
 // prices should be included in this list, as well as a sort based on price
 
-function restrictListProducts(prods, restriction) {
-	let product_names = [];
+function restrictListProducts(prods, restrictions) {
+	let prods1 = [];
 	for (let i=0; i<prods.length; i+=1) {
-		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
-			product_names.push(prods[i].name);
-		}
-		else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true)){
-			product_names.push(prods[i].name);
-		}
-		else if (restriction == "None"){
-			product_names.push(prods[i].name);
+		prods1.push(prods[i]);
+	}
+
+	for (restriction of restrictions) {	
+		i=0;
+		while(i<10){
+			var p= prods1.shift();
+			if(p[restriction] != false){
+				prods1.push(p);
+			}
+			i++;
 		}
 	}
+	// Level 1 requirement: Each user can be vegetarian and/or allergic to gluten. (The code provided only considers the OR ... modify it).
+	prods1.sort(function(a, b){return a.price - b.price});
+		// Level 1 requirement: Items should be in price order.
+
+	let product_names = [];
+	for (let i=0; i<prods1.length; i+=1) {
+		product_names.push(prods1[i].name+ "    "+ prods1[i].price);
+		// Level 1 requirement: Items should have their price indicated
+	}
 	return product_names;
+	
 }
+
+
 
 // Calculate the total price of items, with received parameter being a list of products
 function getTotalPrice(chosenProducts) {

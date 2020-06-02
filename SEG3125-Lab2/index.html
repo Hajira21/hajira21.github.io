@@ -5,10 +5,16 @@
 </head>
 
 <body>
+    
+    <div class="h">
+        <img id="home" src="goodfoodlogo.jpg"><br><br>    
+    </div>
+
 
 <div class="header">
-  <h1>My Website</h1>
-  <p>Resize the browser window to see the effect.</p>
+  <h1>Good Food</h1>
+  <!-- Level 1 requirement: The name of the grocery store-->
+  <p>Shop your way</p>
 </div>
 
   
@@ -23,13 +29,21 @@
 <div id="Client" class="tabcontent">
   <h3>Client Information</h3>
   <p>Tell us a bit about you.</p>
-	Choose a Category:
-	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
-	<option value=""></option>
-	<option value="Vegetarian">Vegetarian</option>
-    <option value="GlutenFree">GlutenFree</option>
-    <option value="None">None</option>
-	</select>
+  Choose a Category:
+  <br>
+  <input type="checkbox" id="dietSelect1" name="dietSelect1" value="Vegetarian"  >
+  <label for="dietSelect1"> Vegetarian</label><br>
+  <input type="checkbox" id="dietSelect2" name="dietSelect2" value="GlutenFree">
+  <label for="dietSelect2"> GlutenFree</label><br>
+  <input type="checkbox" id="dietSelect3" name="dietSelect3" value="Organic">
+  <label for="dietSelect3"> Organic</label><br>
+        <!--Level 1 requirement: user can indicate a preference for organic products or not-->
+
+  <input type="checkbox" id="dietSelect4" name="dietSelect4" value="None">
+  <label for="dietSelect4"> None</label>
+
+
+
 </div>
 
 <div id="Products" class="tabcontent">
@@ -49,7 +63,8 @@
 </div>
 
 <div class="footer">
-        <h2>Footer</h2>
+        <h6>Website designed by Hajira M.</h6>
+         <!--Level 1 requirement:Your signature (Website designed by ...) at the bottom of the page-->
       </div>
 
 <script src="scripts/groceries.js"></script>

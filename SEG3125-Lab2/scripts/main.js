@@ -1,6 +1,7 @@
 
 // This function is called when any of the tab is clicked
 // It is adapted from https://www.w3schools.com/howto/howto_js_tabs.asp
+//Level 1 requirement: The use of JavaScript (separate files) 
 
 function openInfo(evt, tabName) {
 
@@ -20,6 +21,31 @@ function openInfo(evt, tabName) {
 	document.getElementById(tabName).style.display = "block";
 	evt.currentTarget.className += " active";
 
+		// Level 1 requirement: Navigation between two or three areas depending on your grouping of information.
+
+	if(tabName=='Products'){
+	
+		var w = document.getElementById("dietSelect4");
+		var x = document.getElementById("dietSelect1");
+		var y = document.getElementById("dietSelect2");
+		var z = document.getElementById("dietSelect3");
+		var checkboxesChecked = [];
+		
+			if(x.checked==true){
+				checkboxesChecked.push(x.value);
+			}
+			if(y.checked==true){
+				checkboxesChecked.push(y.value);
+			}
+			if(z.checked==true){
+				checkboxesChecked.push(z.value);
+			} 	
+		
+		
+		populateListProductChoices(checkboxesChecked, 'displayProduct');
+	
+	}
+
 }
 
 
@@ -28,40 +54,45 @@ function openInfo(evt, tabName) {
 // it makes each product name as the label for the checkbos
 
 function populateListProductChoices(slct1, slct2) {
-    var s1 = document.getElementById(slct1);
     var s2 = document.getElementById(slct2);
 	
 	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
     s2.innerHTML = "";
 		
 	// obtain a reduced list of products based on restrictions
-    var optionArray = restrictListProducts(products, s1.value);
+	
+		var optionArray = restrictListProducts(products, slct1);
+	
+	//s1 will be the array of restrictions product will be all available choices
+
 
 	// for each item in the array, create a checkbox element, each containing information such as:
 	// <input type="checkbox" name="product" value="Bread">
 	// <label for="Bread">Bread/label><br>
+	
 		
 	for (i = 0; i < optionArray.length; i++) {
-			
-		var productName = optionArray[i];
-		// create the checkbox and add in HTML DOM
-		var checkbox = document.createElement("input");
-		checkbox.type = "checkbox";
-		checkbox.name = "product";
-		checkbox.value = productName;
-		s2.appendChild(checkbox);
 		
-		// create a label for the checkbox, and also add in HTML DOM
-		var label = document.createElement('label')
-		label.htmlFor = productName;
-		label.appendChild(document.createTextNode(productName));
-		s2.appendChild(label);
-		
-		// create a breakline node and add in HTML DOM
-		s2.appendChild(document.createElement("br"));    
-	}
-}
+	var productName = optionArray[i];
+	// create the checkbox and add in HTML DOM
+	var checkbox = document.createElement("input");
+	checkbox.type = "checkbox";
+	checkbox.name = "product";
+	checkbox.value = productName;
+	// Level 1 requirement: Items should have their price indicated.
+	s2.appendChild(checkbox);
 	
+	// create a label for the checkbox, and also add in HTML DOM
+	var label = document.createElement('label')
+	label.htmlFor = productName;
+	label.appendChild(document.createTextNode(productName));
+	s2.appendChild(label);
+	
+	// create a breakline node and add in HTML DOM
+	s2.appendChild(document.createElement("br"));    
+}
+}
+
 // This function is called when the "Add selected items to cart" button in clicked
 // The purpose is to build the HTML to be displayed (a Paragraph) 
 // We build a paragraph to contain the list of selected items, and the total price
@@ -69,7 +100,9 @@ function populateListProductChoices(slct1, slct2) {
 function selectedItems(){
 	
 	var ele = document.getElementsByName("product");
+	var price = document.getElementsByName("price");
 	var chosenProducts = [];
+
 	
 	var c = document.getElementById('displayCart');
 	c.innerHTML = "";
@@ -82,12 +115,15 @@ function selectedItems(){
 		if (ele[i].checked) {
 			para.appendChild(document.createTextNode(ele[i].value));
 			para.appendChild(document.createElement("br"));
-			chosenProducts.push(ele[i].value);
+			var str = ele[i].value;
+			var res = str.split(" ");
+			chosenProducts.push(res[0]);
 		}
 	}
 		
 	// add paragraph and total price
 	c.appendChild(para);
 	c.appendChild(document.createTextNode("Total Price is " + getTotalPrice(chosenProducts)));
+	// Level 1 requirement: the contents of the basket and its total
 		
 }
