@@ -91,26 +91,85 @@ function populateListProductChoices(slct1, slct2) {
 	// <label for="Bread">Bread/label><br>
 	
 		
-	for (i = 0; i < optionArray.length; i++) {
 		
-	var productName = optionArray[i];
-	// create the checkbox and add in HTML DOM
-	var checkbox = document.createElement("input");
-	checkbox.type = "checkbox";
-	checkbox.name = "product";
-	checkbox.value = productName;
-	// Level 1 requirement: Items should have their price indicated.
-	s2.appendChild(checkbox);
-	
-	// create a label for the checkbox, and also add in HTML DOM
-	var label = document.createElement('label')
-	label.htmlFor = productName;
-	label.appendChild(document.createTextNode(productName));
-	s2.appendChild(label);
-	
-	// create a breakline node and add in HTML DOM
-	s2.appendChild(document.createElement("br"));    
-}
+	//Create cards and colums
+
+	for(let i=0; i<optionArray.length; i++){
+
+		var product = optionArray[i];
+		var res = product.split(" ");
+		var productName= res[0];
+		var productPrice= res[1];
+
+		var row= document.createElement('div');
+			s2.appendChild(row);
+			row.className= "row";
+
+			var c1= document.createElement('div');
+			row.appendChild(c1);
+			c1.className= "column";
+			var c2= document.createElement('div');
+			row.appendChild(c2);
+			c2.className= "column";
+			var c3= document.createElement('div');
+			row.appendChild(c3);
+			c3.className= "column";
+			var c4= document.createElement('div');
+			row.appendChild(c4);
+			c4.className= "column";
+
+		//div row class: every i mod 4
+		if(i!=0 && i%4==0){
+			var row= document.createElement('div');
+			s2.appendChild(row);
+			row.className= "row";
+
+			var c1= document.createElement('div');
+			row.appendChild(c1);
+			c1.className= "column";
+			var c2= document.createElement('div');
+			row.appendChild(c2);
+			c2.className= "column";
+			var c3= document.createElement('div');
+			row.appendChild(c3);
+			c3.className= "column";
+			var c4= document.createElement('div');
+			row.appendChild(c4);
+			c4.className= "column";
+		}
+		var x = document.getElementsByClassName("column") //returns a list of elements
+		var a= x[i];
+		//div card class
+		var el= document.createElement('div');
+		a.appendChild(el);
+		el.className="card";
+		
+		var h = document.createElement('H1');
+		el.appendChild(h);
+		var ht = document.createTextNode(productName); 
+		h.appendChild(ht); 
+		
+		
+		
+				
+		var p = document. createElement("P");
+		el.appendChild(p);
+		p.className = "price";
+		var pt = document.createTextNode(productPrice);
+		p.appendChild(pt); 
+		
+		
+		var paraB = document.createElement("P");
+		el.appendChild(paraB);
+		var btn = document.createElement("BUTTON");
+		var node = document.createTextNode("Add to Cart");
+		btn.appendChild(node);
+		paraB.appendChild(btn);
+
+		
+	}
+
+
 }
 
 // This function is called when the "Add selected items to cart" button in clicked
@@ -147,17 +206,15 @@ function selectedItems(){
 	// Level 1 requirement: the contents of the basket and its total
 		
 }
-/*var newText=[];
-	if (slct1.length> 1){
-		newText.push( 'We preselected products based on your ', slct1[0]);
-		for(let i=1; i< slct1.length; i++){
-			newText.push(' and ' ,slct1[i]);
-		}
-		newText.push(' restrictions');
-	}else{
-		newText.push( 'We preselected products based on your ', slct1[0])
-	}
-	var text= newText.join("");
+/*
+   <div class="card">
+    <img src="jeans3.jpg" alt="Denim Jeans" style="width:100%">
+    <h1>Tailored Jeans</h1>
+    <p class="price">$19.99</p>
+    <p><button>Add to Cart</button></p>
+  </div> 
+  Code for product cards inspired from
+  https://www.w3schools.com/howto/howto_css_product_card.asp
+  https://www.w3schools.com/howto/howto_css_column_cards.asp
 
-	
-	document.getElementById("yourRestrictions").innerHTML = text;*/
+*/

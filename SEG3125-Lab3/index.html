@@ -41,7 +41,7 @@
 <div id="Client" class="tabcontent">
   <h3>Client Information</h3>
   <p>Tell us a bit about you.</p>
-  Choose a Category:
+  Select your dietary needs:
   <br>
   <input type="checkbox" id="dietSelect1" name="dietSelect1" value="Vegetarian" onclick="unselectChoices(1)" >
   <label for="dietSelect1"> Vegetarian</label><br>
@@ -60,17 +60,16 @@
 
 <div id="Products" class="tabcontent">
   <h3>Your targeted products</h3>
-  <p id="yourRestrictions">We preselected products based on your restrictions.</p>
+  <p id="yourRestrictions">We preselected products based on your dietary needs.</p>
 	 Choose items to buy:
-	 <div id="displayProduct"></div>
-	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
-		Add selected items to cart.
-	</button>
+   <div id="displayProduct">
+  </div>
 </div>
 
+
 <div id="Cart" class="tabcontent">
-  <h3>Cart</h3>
-  <p>Here is your cart.</p>
+  <h3>My Shopping Cart</h3>
+  <p>Cart Content</p>
   <div id="displayCart"></div>
 </div>
 

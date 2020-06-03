@@ -8,6 +8,7 @@ var products = [
 		Vegetarian: true,
 		GlutenFree: true,
 		Organic: true,
+		//Category: Vegetable
 		// Level 1 requirement: add a characteristic for this purpose in the list of products
 		price: 1.99
 	},
@@ -47,14 +48,14 @@ var products = [
 		price: 1.99
 	},
 	{
-		name: "French fries",
+		name: "Frenchfries",
 		Vegetarian: true,
 		GlutenFree: false,
 		Organic: false,		
 		price: 5.99
 	},
 	{
-		name: "Ice cream",
+		name: "Ice-cream",
 		Vegetarian: true,
 		GlutenFree: false,
 		Organic: false,		
@@ -106,7 +107,7 @@ function restrictListProducts(prods, restrictions) {
 
 	let product_names = [];
 	for (let i=0; i<prods1.length; i+=1) {
-		product_names.push(prods1[i].name+ "    "+ prods1[i].price);
+		product_names.push(prods1[i].name+ " "+ prods1[i].price);
 		// Level 1 requirement: Items should have their price indicated
 	}
 	return product_names;
