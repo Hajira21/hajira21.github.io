@@ -47,14 +47,14 @@ var products = [
 		price: 1.99
 	},
 	{
-		name: "Frenchfries",
+		name: "Fries",
 		Vegetarian: true,
 		GlutenFree: false,
 		Organic: false,		
 		price: 5.99
 	},
 	{
-		name: "Icecream",
+		name: "Ice-cream",
 		Vegetarian: true,
 		GlutenFree: false,
 		Organic: false,		
