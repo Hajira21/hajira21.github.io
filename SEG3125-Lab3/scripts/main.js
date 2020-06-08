@@ -93,15 +93,7 @@ function populateListProductChoices(slct1, slct2) {
 		
 		
 	//Create cards and colums
-
-	for(let i=0; i<optionArray.length; i++){
-
-		var product = optionArray[i];
-		var res = product.split(" ");
-		var productName= res[0];
-		var productPrice= res[1];
-
-		var row= document.createElement('div');
+	var row= document.createElement('div');
 			s2.appendChild(row);
 			row.className= "row";
 
@@ -117,6 +109,18 @@ function populateListProductChoices(slct1, slct2) {
 			var c4= document.createElement('div');
 			row.appendChild(c4);
 			c4.className= "column";
+		
+
+
+	for(let i=0; i<optionArray.length; i++){
+
+		var product = optionArray[i];
+		var res = product.split(" ");
+		var productName= res[0];
+		var productPrice= res[1];
+
+		
+
 
 		//div row class: every i mod 4
 		if(i!=0 && i%4==0){
@@ -136,6 +140,7 @@ function populateListProductChoices(slct1, slct2) {
 			var c4= document.createElement('div');
 			row.appendChild(c4);
 			c4.className= "column";
+			
 		}
 		var x = document.getElementsByClassName("column") //returns a list of elements
 		var a= x[i];
@@ -143,13 +148,22 @@ function populateListProductChoices(slct1, slct2) {
 		var el= document.createElement('div');
 		a.appendChild(el);
 		el.className="card";
+
+		var x = document.createElement("IMG");
+		var s= "images/"+productName+".png"
+		x.setAttribute("src", s);
+		x.setAttribute("width", "100%");
+		x.setAttribute("height", "10%");
+		x.setAttribute("alt", productName);
+		el.appendChild(x);
+
+		
+
 		
 		var h = document.createElement('H1');
 		el.appendChild(h);
 		var ht = document.createTextNode(productName); 
 		h.appendChild(ht); 
-		
-		
 		
 				
 		var p = document. createElement("P");
@@ -166,8 +180,25 @@ function populateListProductChoices(slct1, slct2) {
 		btn.appendChild(node);
 		paraB.appendChild(btn);
 
-		
 	}
+	var row= document.createElement('div');
+			s2.appendChild(row);
+			row.className= "row";
+
+			var c1= document.createElement('div');
+			row.appendChild(c1);
+			c1.className= "column";
+			var c2= document.createElement('div');
+			row.appendChild(c2);
+			c2.className= "column";
+			var c3= document.createElement('div');
+			row.appendChild(c3);
+			c3.className= "column";
+			var c4= document.createElement('div');
+			row.appendChild(c4);
+			c4.className= "column";
+		
+
 
 
 }
