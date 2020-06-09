@@ -94,31 +94,44 @@ var products = [
 // given restrictions provided, make a reduced list of products
 // prices should be included in this list, as well as a sort based on price
 
-function restrictListProducts(prods, restrictions) {
+function restrictListProducts(prods, restrictions, Category) {
 	let prods1 = [];
 	for (let i=0; i<prods.length; i+=1) {
 		prods1.push(prods[i]);
-	}
-
-	for (restriction of restrictions) {	
-		i=0;
-		while(i<10){
-			var p= prods1.shift();
-			if(p[restriction] != false){
-				prods1.push(p);
+	}	
+	
+	if(!restrictions.length<1){
+	
+		for (restriction of restrictions) {	
+			i=0;
+			while(i<10){
+				var p= prods1.shift();
+				if(p[restriction] != false){
+					prods1.push(p);
+				}
+				i++;
 			}
-			i++;
 		}
 	}
+
 	// Level 1 requirement: Each user can be vegetarian and/or allergic to gluten. (The code provided only considers the OR ... modify it).
 	prods1.sort(function(a, b){return a.price - b.price});
 		// Level 1 requirement: Items should be in price order.
 
-	let product_names = [];
-	for (let i=0; i<prods1.length; i+=1) {
-		product_names.push(prods1[i].name+ " "+ prods1[i].price);
-		// Level 1 requirement: Items should have their price indicated
-	}
+		let product_names = [];
+		for (let i=0; i<prods1.length; i+=1) {
+			var v= prods1[i].Category;
+			var res= v.split(' ');
+
+			if(Category=="All"){
+				product_names.push(prods1[i].name+ " "+ prods1[i].price);
+			}else{
+				if(res[0]==Category){
+					product_names.push(prods1[i].name+ " "+ prods1[i].price);
+				}
+			}
+			// Level 1 requirement: Items should have their price indicated
+		}
 	return product_names;
 	
 }

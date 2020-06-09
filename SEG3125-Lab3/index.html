@@ -28,33 +28,46 @@
   <p style="color:white;">Shop your way</p>
 </div>
 
-
-  
-<!-- Tab links, each one with an onclick event associated with it -->
-<div class="tab">
-  <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
-  <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
-  <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+<div class="sidenav">
+  <a><button onclick="openInfo(event, 'Client')">Client</button></a>
+  <a><button onclick="openInfo(event, 'Products')">Products</button></a>
+  <a><button onclick="openInfo(event, 'Cart')">Cart</button></a>
 </div>
 
+
+<!-- Tab links, each one with an onclick event associated with it -->
+<div class="tab">
+<h5>Choose a Category:
+  <select name="Category" id="Category" onchange="populateListProductChoices(checkF(),'displayProduct','Category')">
+    <option value="All"> All Product</option>
+    <option value="Bread">Bread & Bakery Product</option>
+    <option value="Fish">Fish and seafood</option>
+    <option value="Frozen">Frozen</option>
+    <option value="Fruits">Fruits & Vegetable</option>
+    <option value="Meat">Meat & Poultry</option>
+  </select>
+</h5>
+
+</div>
+
+
+
+
+
+<div class="main">
 <!-- Tab content -->
 <div id="Client" class="tabcontent">
   <h3>Client Information</h3>
   <p>Tell us a bit about you.</p>
   Select your dietary needs:
   <br>
-  <input type="checkbox" id="dietSelect1" name="dietSelect1" value="Vegetarian" onclick="unselectChoices(1)" >
+  <input type="checkbox" id="dietSelect1" name="dietSelect1" value="Vegetarian" onclick="unselectChoices()" >
   <label for="dietSelect1"> Vegetarian</label><br>
-  <input type="checkbox" id="dietSelect2" name="dietSelect2" value="GlutenFree"onclick="unselectChoices(1)">
+  <input type="checkbox" id="dietSelect2" name="dietSelect2" value="GlutenFree"onclick="unselectChoices()">
   <label for="dietSelect2"> GlutenFree</label><br>
-  <input type="checkbox" id="dietSelect3" name="dietSelect3" value="Organic" onclick="unselectChoices(1)">
+  <input type="checkbox" id="dietSelect3" name="dietSelect3" value="Organic" onclick="unselectChoices()">
   <label for="dietSelect3"> Organic</label><br>
         <!--Level 1 requirement: user can indicate a preference for organic products or not-->
-  <input type="checkbox" id="dietSelect4" name="dietSelect4" value="None" onclick="unselectChoices(0)">
-  <label for="dietSelect4"> None</label>
-
-
-
 </div>
 
 <div id="Products" class="tabcontent">
@@ -71,6 +84,9 @@
   <p>Cart Content</p>
   <div id="displayCart"></div>
 </div>
+
+</div>
+
 
 <div class="footer">
         <h6>Website designed by Hajira M.</h6>

@@ -2,6 +2,46 @@
 /*Level 1 requirement: The use of external CSS (separate file) to define styles for titles, divisions, and your signature
 at the bottom of the site.*/
 
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav button{
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  background:none;
+  border:none;
+  margin:0;
+  padding: 6px 8px 6px 16px;
+  cursor: pointer;
+}
+
+
+.sidenav button:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px ;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
 /*Product Cards */
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -43,9 +83,7 @@ at the bottom of the site.*/
   opacity: 0%;
   transition: .3s ease;
 }
-.active {
 
-}
 /*Colums */
 
 /* Create four equal columns that floats next to each other */
@@ -89,6 +127,7 @@ body {
 .header {
   padding: 30px;
   text-align: center;
+  
 
 }
 
@@ -105,26 +144,26 @@ body {
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
+  text-align: bottom;
 }
 
 /* Style the buttons that are used to open the tab content */
-.tab button {
+.tab h5{
   background-color: inherit;
-  float: left;
+  float: right;
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 14px 16px;
   transition: 0.3s;
 }
 
 /* Change background color of buttons on hover */
-.tab button:hover {
+.tab select:hover {
   background-color: #ddd;
 }
 
 /* Create an active/current tablink class */
-.tab button.active {
+.tab select.active {
   background-color: #ccc;
 }
 
@@ -139,7 +178,7 @@ body {
 /* Footer */
 .footer {
   padding: 20px;
-  text-align: center;
+  text-align: right;
   background: #ddd;
   margin-top: 20px;
 }

@@ -2,18 +2,12 @@
 // This function is called when any of the tab is clicked
 // It is adapted from https://www.w3schools.com/howto/howto_js_tabs.asp
 //Level 1 requirement: The use of JavaScript (separate files) 
-function unselectChoices(x){
-	if(x==1){
-		document.getElementById("dietSelect4").checked = false;
-	}
-	else{
-		document.getElementById("dietSelect1").checked = false;
-		document.getElementById("dietSelect2").checked = false;
-		document.getElementById("dietSelect3").checked = false;	
-	}
+function checkF(){
+
 	var x = document.getElementById("dietSelect1");
 	var y = document.getElementById("dietSelect2");
 	var z = document.getElementById("dietSelect3");
+	
 	var checkboxesChecked = [];
 		
 	if(x.checked==true){
@@ -25,9 +19,11 @@ function unselectChoices(x){
 	if(z.checked==true){
 		checkboxesChecked.push(z.value);
 	}
-
-	populateListProductChoices(checkboxesChecked, 'displayProduct');
+	
+	return checkboxesChecked;
 }
+
+
 function openInfo(evt, tabName) {
 
 	// Get all elements with class="tabcontent" and hide them
@@ -36,25 +32,31 @@ function openInfo(evt, tabName) {
 		tabcontent[i].style.display = "none";
 	}
 
-	// Get all elements with class="tablinks" and remove the class "active"
+	/*// Get all elements with class="tablinks" and remove the class "active"
 	tablinks = document.getElementsByClassName("tablinks");
 	for (i = 0; i < tablinks.length; i++) {
 		tablinks[i].className = tablinks[i].className.replace(" active", "");
-	}
+	}*/
 
 	// Show the current tab, and add an "active" class to the button that opened the tab
 	document.getElementById(tabName).style.display = "block";
 	evt.currentTarget.className += " active";
+
+	if(tabName=='Products'){
+		populateListProductChoices(checkF(), 'displayProduct', 'Category');
+	}
+
 	
 	// Level 1 requirement: Navigation between two or three areas depending on your grouping of information.
 }
 
 
-	
 // generate a checkbox list from a list of products
 // it makes each product name as the label for the checkbos
 
-function populateListProductChoices(slct1, slct2) {
+function populateListProductChoices(slct1, slct2, slct3) {
+	var s3 = document.getElementById(slct3);
+
 	var newText=[];
 	if (slct1.length> 1){
 		newText.push( 'We preselected products based on your ', slct1[0]);
@@ -81,7 +83,7 @@ function populateListProductChoices(slct1, slct2) {
 		
 	// obtain a reduced list of products based on restrictions
 	
-		var optionArray = restrictListProducts(products, slct1);
+		var optionArray = restrictListProducts(products,slct1,s3.value);
 	
 	//s1 will be the array of restrictions product will be all available choices
 
@@ -89,6 +91,7 @@ function populateListProductChoices(slct1, slct2) {
 	// for each item in the array, create a checkbox element, each containing information such as:
 	// <input type="checkbox" name="product" value="Bread">
 	// <label for="Bread">Bread/label><br>
+
 	
 		
 		
@@ -109,6 +112,8 @@ function populateListProductChoices(slct1, slct2) {
 			var c4= document.createElement('div');
 			row.appendChild(c4);
 			c4.className= "column";
+
+
 		
 
 
