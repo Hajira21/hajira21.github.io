@@ -8,7 +8,7 @@ var products = [
 		Vegetarian: true,
 		GlutenFree: true,
 		Organic: true,
-		//Category: Vegetable
+		Category: "Fruits & Vegetable",
 		// Level 1 requirement: add a characteristic for this purpose in the list of products
 		price: 1.99
 	},
@@ -17,27 +17,31 @@ var products = [
 		Vegetarian: true,
 		GlutenFree: false,
 		Organic: false,
+		Category: "Bread & Bakery Product",
 		price: 2.35
 	},
 	{
 		name: "Salmon",
 		Vegetarian: false,
 		GlutenFree: true,
-		Organic: true,		
+		Organic: true,
+		Category:"Fish and seafood",	
 		price: 10.55
 	},
 	{
 		name: "Chicken",
 		Vegetarian: false,
 		GlutenFree: true,
-		Organic: false,		
+		Organic: false,
+		Category:"Meat & Poultry",		
 		price: 12.99
 	},
 	{
 		name: "Beef",
 		Vegetarian: false,
 		GlutenFree: true,
-		Organic: true,		
+		Organic: true,
+		Category:"Meat & Poultry",	
 		price: 13.99
 	},
 	{
@@ -45,34 +49,39 @@ var products = [
 		Vegetarian: true,
 		GlutenFree: true,
 		Organic: true,
+		Category: "Fruits & Vegetable",
 		price: 1.99
 	},
 	{
 		name: "Fries",
 		Vegetarian: true,
 		GlutenFree: false,
-		Organic: false,		
+		Organic: false,	
+		Category: "Frozen",
 		price: 5.99
 	},
 	{
 		name: "Ice-cream",
 		Vegetarian: true,
 		GlutenFree: false,
-		Organic: false,		
+		Organic: false,	
+		Category: "Frozen",	
 		price: 4.99
 	},
 	{
 		name: "Cake",
 		Vegetarian: true,
 		GlutenFree: false,
-		Organic: false,		
+		Organic: false,	
+		Category: "Bread & Bakery Product",
 		price: 8.99
 	},
 	{
 		name: "Cauliflower",
 		Vegetarian: true,
 		GlutenFree: true,
-		Organic: false,		
+		Organic: false,	
+		Category: "Fruits & Vegetable",
 		price: 1.99
 	}
 	// Level 1 requirement: At least 10 possible products in the product list

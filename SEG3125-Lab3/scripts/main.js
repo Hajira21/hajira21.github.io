@@ -119,9 +119,6 @@ function populateListProductChoices(slct1, slct2) {
 		var productName= res[0];
 		var productPrice= res[1];
 
-		
-
-
 		//div row class: every i mod 4
 		if(i!=0 && i%4==0){
 			var row= document.createElement('div');
@@ -156,10 +153,8 @@ function populateListProductChoices(slct1, slct2) {
 		x.setAttribute("height", "10%");
 		x.setAttribute("alt", productName);
 		el.appendChild(x);
-
 		
 
-		
 		var h = document.createElement('H1');
 		el.appendChild(h);
 		var ht = document.createTextNode(productName); 
@@ -178,8 +173,16 @@ function populateListProductChoices(slct1, slct2) {
 		var btn = document.createElement("BUTTON");
 		var node = document.createTextNode("Add to Cart");
 		btn.appendChild(node);
+		var checkbox = document.createElement("input");
+		checkbox.type = "checkbox";
+		checkbox.name = "product";
+		checkbox.value = productName+' '+productPrice;
+		btn.appendChild(checkbox);
+		var t= 'cBox("'+productName+' '+productPrice+'")';
+		btn.setAttribute("onclick",t);
 		paraB.appendChild(btn);
-
+	
+	
 	}
 	var row= document.createElement('div');
 			s2.appendChild(row);
@@ -197,20 +200,28 @@ function populateListProductChoices(slct1, slct2) {
 			var c4= document.createElement('div');
 			row.appendChild(c4);
 			c4.className= "column";
-		
+}
 
 
+function cBox(productN){
+	var ele = document.getElementsByName("product");
+	for (i = 0; i < ele.length; i++) { 
+		if(ele[i].value==productN){
+			ele[i].checked= !ele[i].checked;
+		}
+	}
+	selectedItems()
 
 }
+
 
 // This function is called when the "Add selected items to cart" button in clicked
 // The purpose is to build the HTML to be displayed (a Paragraph) 
 // We build a paragraph to contain the list of selected items, and the total price
 
 function selectedItems(){
-	
+
 	var ele = document.getElementsByName("product");
-	var price = document.getElementsByName("price");
 	var chosenProducts = [];
 
 	
@@ -225,8 +236,8 @@ function selectedItems(){
 		if (ele[i].checked) {
 			para.appendChild(document.createTextNode(ele[i].value));
 			para.appendChild(document.createElement("br"));
-			var str = ele[i].value;
-			var res = str.split(" ");
+			var s= ele[i].value;
+			var res= s.split(' ');
 			chosenProducts.push(res[0]);
 		}
 	}
@@ -247,5 +258,6 @@ function selectedItems(){
   Code for product cards inspired from
   https://www.w3schools.com/howto/howto_css_product_card.asp
   https://www.w3schools.com/howto/howto_css_column_cards.asp
+  https://www.creativefabrica.com/product/shopping-cart-with-check-mark-icon-3/
 
 */
