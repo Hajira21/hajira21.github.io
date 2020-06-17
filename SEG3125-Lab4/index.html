@@ -1,0 +1,233 @@
+<!-- This file contains many elements adapted from the online tutoral -->
+<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+
+<!-- Images source: 
+    Brad: https://www.google.com/url?sa=i&url=https%3A%2F%2Ffan.guru%2Fc%2F5b23c0e94f401d00241e7c5f%2Fguest%2F5b23da9c4f401d00241e7cd3%2Fabout&psig=AOvVaw0HSFxA44GCUU_fXjtLi3hl&ust=1592434222086000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNi6_PO1h-oCFQAAAAAdAAAAABAD
+    Jasmine: https://www.google.com/url?sa=i&url=https%3A%2F%2Frungrl.co%2Fblog%2Fhow-to-refresh-natural-hair-after-run-workout&psig=AOvVaw2LmAumgcNmBXoS6RDfdwHv&ust=1592434592362000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKCDu6W3h-oCFQAAAAAdAAAAABAJ
+    Logo:https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fillustrations%2Fhaircutting-scissors&psig=AOvVaw0BjETxENqnLtf0orLTMdWC&ust=1592441730392000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJixm_HRh-oCFQAAAAAdAAAAABAQ
+    Devacut: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F536843218064229877%2F&psig=AOvVaw2y4lbbbnvT2i85TDCjzKIT&ust=1592443462683000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPibhKvYh-oCFQAAAAAdAAAAABAJ
+    Curl transformation: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F525162006532751076%2F&psig=AOvVaw1KgRDcwlf600GJXGsJYkD1&ust=1592443543912000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIDngNLYh-oCFQAAAAAdAAAAABAD
+    Rezo cut: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F439523244885284725%2F&psig=AOvVaw2KV7wRISu9-vnIiU-o0JrT&ust=1592443592724000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPjGierYh-oCFQAAAAAdAAAAABAD
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- The head should contain an appropriate title for your site -->
+<head>
+    <title>Hairdresser's site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+
+    <!-- Your own additional style sheet -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <!--  CSS and JS files found from https://tempusdominus.github.io/bootstrap-4/ -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+
+    
+</head>
+
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <!-- Medium size container, padding 3, margins 3, background dark, text is white -->
+    <!-- Should show the name of your company with an image or logo -->
+    <!-- Bootstrap has its own font for H1, H2, p, etc.  -->
+    <!-- Look in BS4 Typography https://www.w3schools.com/bootstrap4/bootstrap_typography.asp -->
+    <!-- Use your own CSS file to change those fonts if they do not correspond to your company's look -->
+    <!--  Find a way to keep -->
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="#">
+            <img src="images/logo.jpg" alt="Logo" style="width:40px;">       
+        </a> 
+            <!-- Links -->
+        <ul class="navbar-nav ">
+          <li class="nav-item">
+            <a class="nav-link" href="#section1">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section2">Experts</a>
+          </li>
+         </ul>
+         <div class="justify-content-end">
+            <button type="button" class="btn btn-primary" onClick="document.getElementById('section3').scrollIntoView();">Book now</button>
+         </div>
+      </nav>
+     
+
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="text-center">Welcome to CurlyCuts</h1>      
+          <p class="text-center text-uppercase">We expertise in creating beautiful styles on curly and coily hair. Our mission is to provide you with superior service everyday. Book an appointment today!</p>
+        </div>
+      </div>
+<!--  -->
+<!-- Bootstrap has components for alerts: https://www.w3schools.com/bootstrap4/bootstrap_alerts.asp -->
+    <!-- These can be useful for making sure someone reads something before continuing -->
+    <div class="container">
+       
+        <div class="alert alert-danger alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Please note: </strong>Due to COVID-19 pandemic appointments will be put in a waitlist.
+        </div>
+    </div>
+
+
+
+    <!-- Might be (or not) useful to show some information to the user -->
+    <div id= "section1" class="container">
+        <br>
+        <br>
+        <h2>Service description</h2>
+        <p>Here is a list of services offered</p>            
+        <table class="table table-info table-hover">
+            <thead>
+            <tr>
+                <th>Service</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Deva Cut </td>
+                <td>Curl Edit a dry cut that is for maintaining your current shape and style.  $80
+                    <img src="images/devacut.jpg" class="img-thumbnail" height="10%" width="50%">
+                </td>
+            </tr>
+            <tr>
+                <td>Curl Transformation</td>
+                <td>a dry cut that is designed for first time clients, or a major change and when cutting more then 3 inches of growth  $90
+                    <img src="images/curltrans.jpg" class="img-thumbnail" height="10%" width="50%">
+                </td>
+            </tr>
+            <tr>
+                <td>Rezo Cut</td>
+                <td>A dry cut for those wanting to create maximum volume and shape $95
+                    <img src="images/rezocut.jpg" class="img-thumbnail"height="10%" width="50%" >
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Presenting the staff with cards: https://www.w3schools.com/bootstrap4/bootstrap_cards.asp -->
+    <!-- Card columns allows multiple cards next to each other -->
+    <!-- The first card's button doesn't go anywhere, it could be a modal --> 
+    <!-- My second card limits the information seen and uses collapsible to show more -->
+    <div id= "section2" div class="container p-3">
+        <br>
+        <br>
+        <h2>Meet our hairdressers</h2>
+        <div class="card-columns">
+            <div class="card bg-dark" style="width:200px">
+                <img class="card-img-top" src="images/jasmine.jpg" alt="Card image" style="width:100%">
+                <div class="card-body text-white">
+                    <h4 class="card-title ">Jasmine</h4>
+                    <p class="card-text">Jasmine has been cutting hair for 10 years. She is our gloss expert</p>
+                    <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+            </div>
+
+            <div class="card bg-dark" style="width:200px">
+                <img class="card-img-top" src="images/Brad.dms" alt="Card image" style="width:100%">
+                <div class="card-body text-white">
+                    <h4 class="card-title ">Brad</h4>
+                    <p class="card-text">Brad has been cutting hair for 5 years. He is our volume expert.</p>
+                    <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <iv id= "section3" div class="card">
+        <br>
+        <br>
+
+        <div class="card-header">
+            <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Your info</a>
+        </div>
+    </div>
+    <div class="card-body">
+        <p>Please enter your information so we can contact you</p>
+        <div class="form-group">
+            <label for="usr">Name:</label>
+            <input type="text" class="form-control" id="usr">
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" class="form-control" id="eml">
+          </div>
+          <div class="form-group">
+            <label for="phoneNum">Phone Number:</label>
+            <input type="text" class="form-control" id="num">
+          </div>
+            <div class="input-group mt-3 mb-3">
+                <div class="input-group-prepend">
+                   <select class="form-control" id="sel1">
+                       <option>Select a service:</option>
+                       <option>Deva Cut</option>
+                       <option>Curl Transformation</option>
+                       <option>Rezo Cut</option>
+                   </select>
+         </div>
+            <div class="input-group-prepend">
+                <select class="form-control" id="sel2">
+                    <option>Select a stylist:</option>
+                    <option>Jasmine</option>
+                    <option>Brad</option>
+                </select>
+            </div>
+            <div class="input-group-prepend">
+              <!-- Code for date picker found at   https://tempusdominus.github.io/bootstrap-4/Usage/ -->
+                    <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                        <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1"/>
+                        <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                        </div>
+                    </div>
+    
+            <script type="text/javascript">
+                $(function () {
+                    $('#datetimepicker1').datetimepicker();
+                });
+            </script>
+            </div>
+            <button type="button" class="btn btn-primary" onClick="document.getElementById('section3').scrollIntoView();">Book now</button>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white">
+        <br>
+        <br>
+        <h2> Contact us </h2>
+        <div class="row">
+            <div class="col-sm-4">
+                <p> <i class="fas fa-map-marker-alt"></i><nbsp></nbsp> <nbsp></nbsp> 1425 Broome Street, New York, NY 10013 </p>
+                <p><i class='fas fa-phone'></i> <nbsp></nbsp> <nbsp></nbsp> (212) 274-8686</p>
+            </div>
+            <div class="col-sm-8 text-right"> 
+                <h3>Buisness hours</h3>   
+                Mon: 10am - 5pm <br>
+                Tue - Sat: 8am - 8pm <br>
+                Sun: 10am - 5pm <br>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
