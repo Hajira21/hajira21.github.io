@@ -4,6 +4,22 @@
 
 /* Bootstrap default font-family is Helvetica Neue */
 h1 {
-  font-family: "Times New Roman", Times, serif;
- /* text-shadow: 3px 3px 1px black;*/
-}
+   font-family: "Times New Roman", Times, serif;
+    /* font-size: 60px;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+   color: #ff00ff;  
+   */
+ }
+ 
+ .error {
+   background-color: yellow;
+   color : red;
+ }
+ 
+ 
+ .showInput {
+   background-color: pink;
+ }
+ 

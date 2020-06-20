@@ -1,5 +1,7 @@
-<!-- This file contains many elements adapted from the online tutoral -->
+<!-- This file contains a few elements adapted from the online tutoral -->
 <!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+<!-- as well as JQuery found here: https://www.w3schools.com/jquery/default.asp -->
+
 
 <!-- Images source: 
     Brad: https://www.google.com/url?sa=i&url=https%3A%2F%2Ffan.guru%2Fc%2F5b23c0e94f401d00241e7c5f%2Fguest%2F5b23da9c4f401d00241e7cd3%2Fabout&psig=AOvVaw0HSFxA44GCUU_fXjtLi3hl&ust=1592434222086000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNi6_PO1h-oCFQAAAAAdAAAAABAD
@@ -14,7 +16,6 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <!-- The head should contain an appropriate title for your site -->
 <head>
     <title>Hairdresser's site</title>
@@ -36,6 +37,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+    <!-- Your own script -->
+    <script src="scripts/service.js"></script>
 
 
     
@@ -177,18 +181,20 @@
 
     <div class="card-body">
         <p>Please enter your information so we can contact you</p>
-        <div class="form-group">
-            <label for="usr">Name:</label>
-            <input type="text" class="form-control" id="usr">
+
+        <div class="form-group" id="third">
+            <p>Name: <input type="text" id="nameInput"></p>
+            <label for="phone">Phone number:</label>
+            <input type="tel" id="phone" name="phone"  placeholder="(123) 123-4567" required>
           </div>
-          <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="text" class="form-control" id="eml">
-          </div>
-          <div class="form-group">
-            <label for="phoneNum">Phone Number:</label>
-            <input type="text" class="form-control" id="num">
-          </div>
+          <label for="credit">Credit card:</label>
+          <input type="text" id="credit" name="creditCard"  placeholder="1234 1234 1234 1234" required>
+          
+
+
+
+          <br>
+
             <div class="input-group mt-3 mb-3">
                 <div class="input-group-prepend">
                    <select class="form-control" id="sel1">
