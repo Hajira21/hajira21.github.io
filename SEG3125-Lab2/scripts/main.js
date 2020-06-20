@@ -147,17 +147,3 @@ function selectedItems(){
 	// Level 1 requirement: the contents of the basket and its total
 		
 }
-/*var newText=[];
-	if (slct1.length> 1){
-		newText.push( 'We preselected products based on your ', slct1[0]);
-		for(let i=1; i< slct1.length; i++){
-			newText.push(' and ' ,slct1[i]);
-		}
-		newText.push(' restrictions');
-	}else{
-		newText.push( 'We preselected products based on your ', slct1[0])
-	}
-	var text= newText.join("");
-
-	
-	document.getElementById("yourRestrictions").innerHTML = text;*/
