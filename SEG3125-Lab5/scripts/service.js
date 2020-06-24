@@ -97,7 +97,7 @@ $(document).ready(function(){
 
     // Also, here is a good tutorial for playing with the datepicker in https://webkul.com/blog/jquery-datepicker/ 
     // Datepicker is also documented as one of the widgets here: https://api.jqueryui.com/category/widgets/ 
-    $( "#dateInput" ).datepicker(
+    $( "#datetimepicker1" ).datepicker(
         {
             dateFormat: setDateFormat,
             // no calendar before June 1rst 2020
