@@ -22,6 +22,51 @@ function validatePhone(txtPhone) {
         return false;
     }
 }
+function validateAll(){
+    var a= document.getElementById("nameInput").value;
+    var b = document.getElementById("phone").value;
+    var c = document.getElementById("credit").value;
+
+    if (!validateCard("credit") ||!validatePhone("phone") || a == ""){
+        if (!validateCard("credit")){
+            //alert("Wrong format for credit card");
+            $("#credit").val("xxxx xxxx xxxx xxxx");
+            $("#credit").addClass("error");
+        }
+        if (!validatePhone("phone")){
+           // alert("Wrong format for phone");
+            $("#phone").val("(xxx)");
+            $("#phone").addClass("error");
+        }
+        
+        var s2 = document.getElementById(sl1);
+        var div= document.createElement('div');
+        s2.appendChild(div);
+
+        div.className= "alert alert-danger";
+        var x = document.createElement("STRONG");
+        div.appendChild(x);
+        var t = document.createTextNode("Booking was unsucessful, please ensure all fields are valid");
+        x.appendChild(t);
+
+
+    }else{
+        var s2 = document.getElementById(sl1);
+        var div= document.createElement('div');
+        s2.appendChild(div);
+
+        div.className= "alert alert-success";
+        var x = document.createElement("STRONG");
+        div.appendChild(x);
+        var t = document.createTextNode("Booking was sucessful, hope to see you soon");
+        x.appendChild(t);
+
+    }
+
+
+   
+
+}
 
 function validateCard(txtCard) {
     var b = document.getElementById(txtCard).value;
@@ -59,7 +104,7 @@ function disableDates(date) {
     if( date.getDay()==1 && stylist=="Jasmine"){ // Jasmine doesnt work mondays
         return [false];
     }
-    if( date.getDay()==3 && stylist=="Brad"){ // Brad doesnt work mondays
+    if( date.getDay()==3 && stylist=="Brad"){ // Brad doesnt work wednesdays
         return [false];
     }
     var string = jQuery.datepicker.formatDate(setDateFormat, date);

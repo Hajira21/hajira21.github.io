@@ -220,7 +220,7 @@
         <input type="text" id="credit" name="creditCard"  placeholder="1234 1234 1234 1234" required>
         
         <br>
-        <div class="input-group mt-3 mb-3">
+        <div class="input-group mt-3 mb-3" id="sl2">
             <div class="input-group-prepend">
                 <select class="form-control" id="sel1">
                     <option>Select a service:</option>
@@ -244,8 +244,11 @@
             </div>
 
             <div class="input-group-prepend">
-                <button type="button" class="btn btn-primary" onClick="document.getElementById('section3').scrollIntoView();">Book now</button>
+                <button type="button" class="btn btn-primary" onClick="validateAll()">Book now</button>
             </div>
+        </div>
+        <div id="sl1">
+            
         </div>
     </div>
 

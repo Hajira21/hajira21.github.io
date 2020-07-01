@@ -1,0 +1,62 @@
+<html lang="en-US">
+<head>
+    <title>Survey Analysis</title>
+</head>
+
+<body>
+    <h1>Survey analysis</h1>
+
+    <h2>Was this homepage easy to use?</h2>
+    <h3>User answers:</h3>
+
+    <ul>
+    <% for (var i=0; i<results[0].length; i++){ %>
+        <li><%= results[0][i].easy %> :  <%= results[0][i].count %></li>
+    <% } %>    
+    </ul>
+
+    <h2>What function(s) did you find useful?</h2>
+    <h3>User answers:</h3>
+
+    <ul>
+        <% for (var i=0; i<results[1].length; i++){ %>
+            <li><%= results[1][i].useful %> :  <%= results[1][i].count %></li>
+        <% } %>    
+    </ul>
+
+    <h2>Rate the level of difficulty navigating this site</h2>
+    <h3>User answers:</h3>
+
+    <ul>
+    <% for (var i=0; i<results[2].length; i++){ %>
+        <li><%= results[2][i].difficulty %> :  <%= results[2][i].count %></li>
+    <% } %> 
+    </ul>
+
+    <h2>What could this site improve?</h2>
+    <h3>User answers:</h3>
+    <ul>
+    <% for (var i=0; i<results[3].length; i++){ %>
+        <li><%= results[3][i].improve %> :  <%= results[3][i].count %></li>
+    <% } %>    
+    </ul>
+
+    <h2>Were you satisfied with your experience?</h2>
+    <h3>User answers:</h3>
+    <ul>
+    <% for (var i=0; i<results[4].length; i++){ %>
+        <li><%= results[4][i].likert %> :  <%= results[4][i].count %></li>
+    <% } %>    
+    </ul>
+
+    <h2>Did you find yourself productive when using this site?</h2>
+    <h3>User answers:</h3>
+    <ul>
+    <% for (var i=0; i<results[5].length; i++){ %>
+        <li><%= results[5][i].productive %> :  <%= results[5][i].count %></li>
+    <% } %>    
+    </ul>
+
+   
+</body>
+</html>

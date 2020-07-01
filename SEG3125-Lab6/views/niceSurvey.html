@@ -1,0 +1,137 @@
+<html>
+  <head>
+    <title>Questionnaire</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+  </head>
+  
+  <body>
+	
+	<div class="container-md p-3 my-3 border bg-dark text-white" id="survey">
+    <div class="container">
+      <div class="page-header text-center">
+        <h1>University of Ottawa Homepage Evaluation</h1>
+      </div>
+    </div>    
+
+    <div class="jumbotron text-center">
+   
+      <a href="https://www.uottawa.ca/en">
+        <img src="/assets/uottawahomepage.png" alt="uottawa.ca/en" width="395" height="190">
+        </a>
+  </div>
+
+    <form>
+      
+      <ol class="center"> 
+        <li class="thick" >Was this homepage easy to use?</li>
+          <div class="form-check">
+            <label class="form-check-label" for="radio1">
+              <input type="radio" class="form-check-input" id="radio1" name="easy" value="Yes" checked> Yes
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label" for="radio2">
+              <input type="radio" class="form-check-input" id="radio2" name="easy" value="No"> No
+            </label>
+          </div>
+          <br>
+
+          <li class="thick"> What function(s) did you find useful?</li>
+          <div class="form-check">
+            <label class="form-check-label" for="check1">
+              <input type="checkbox" class="form-check-input" id="check1" name="useful" value="Find a program or course" >Find a program or course
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label" for="check2">
+              <input type="checkbox" class="form-check-input" id="check2" name="useful" value="Find your future">Find your future
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label" for="check3">
+              <input type="checkbox" class="form-check-input" id="check3" name="useful" value="Campus tours">Campus tours
+            </label>
+          </div>
+          <br>
+
+          <li class="thick"> Rate the level of difficulty navigating this site </li>
+          <select name="difficulty">
+            <option value="Very easy" selected="selected">Very easy </option>
+            <option value="Not too hard">Not too hard </option>
+            <option value="Very difficult">Very difficult </option> 
+          </select>
+
+          <div class="form-group">
+            <br>
+            <li class="thick" ><label for="q4">What could this site improve?</label></li>
+            <input type="text" class="form-control" name="improve" placeholder="This site can improve..." required>
+          </div>
+          <br>
+          <li class="thick"> Were you satisfied with your experience?</li>
+          <div class="form-check-inline">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="likert"  value="Very Satisfied" checked>Very Satisfied
+            </label>
+          </div>
+          <div class="form-check-inline">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="likert" value="Satisfied">Satisfied
+            </label>
+          </div>
+          <div class="form-check-inline disabled">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="likert" value="Neutral">Neutral
+            </label>
+          </div>
+          <div class="form-check-inline">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="likert" value="Unsatisfied">Unsatisfied
+            </label>
+          </div>
+          <div class="form-check-inline disabled">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="likert" value="Very Unsatisfied">Very Unsatisfied
+
+            </label>
+          </div>
+          <br>
+
+          <br>
+          <li class="thick" >Did you find yourself productive when using this site?</li>
+          <div class="form-check">
+            <label class="form-check-label" for="radio3">
+              <input type="radio" class="form-check-input" id="radio3" name="productive" value="Yes" checked> Yes
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label" for="radio4">
+              <input type="radio" class="form-check-input" id="radio4" name="productive" value="No"> No
+            </label>
+          </div>
+          <br>
+          <br>
+
+
+          <!-- <div class="form-group">
+            “Code for comments inspired by https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_form_textarea&stacked=h 
+            <br>
+            <label for="comment">Provide additional comment:</label>
+            <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+          </div>-->
+          <button type="submit" class="btn btn-primary btn-block" id="bb">Submit</button>
+          <p id="thanks"></p>
+      </ol> 
+<!-- “Code for X inspired by ………. (html link) -->
+    </form>
+    </div>
+	<script src="/assets/action.js"></script>
+  </body>
+</html> 
